@@ -2,7 +2,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
 	val kotlinVersion = "1.3.21"
-	id("org.springframework.boot") version "2.1.2.RELEASE"
+	//id("org.springframework.boot") version "2.1.2.RELEASE"
+	id("org.springframework.boot") version "2.2.0.M4"
 	id("org.jetbrains.kotlin.jvm") version kotlinVersion
 	id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
 	id("org.jetbrains.kotlin.plugin.jpa") version kotlinVersion
@@ -24,6 +25,7 @@ tasks.withType<Test> {
 
 repositories {
 	mavenCentral()
+	maven(url = "https://repo.spring.io/milestone")
 }
 
 dependencies {
